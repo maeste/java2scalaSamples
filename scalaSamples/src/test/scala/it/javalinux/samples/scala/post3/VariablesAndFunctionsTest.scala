@@ -19,7 +19,8 @@ class VariablesAndFunctionsTest {
     	// It doesn't compile...you can't reassign val
 
     	//instance.fooStringVal = "anotherString"
-    	assertTrue(instance.fooStringVal == "fooString" )
+    	assertTrue(instance.fooStringVal == new String("fooString") )
+        assertFalse(instance.fooStringVal eq new String("fooString") )
     }
     
     @Test
@@ -32,13 +33,15 @@ class VariablesAndFunctionsTest {
     @Test
     def testEmptyConstructor() = {
     	val instance = new VariablesAndFunctions()
-    	assertTrue(instance.inputString == "defaultString")
+    	assertTrue(instance.inputString == new String("defaultString") )
+        assertFalse(instance.inputString eq new String("defaultString") )
     }
     
     @Test
     def testConstructor() = {
     	val instance = new VariablesAndFunctions("myString")
-    	assertTrue(instance.inputString == "myString")
+    	assertTrue(instance.inputString == new String("myString") )
+        assertFalse(instance.inputString eq new String("myString") )
     }
 
 

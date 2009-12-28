@@ -10,7 +10,6 @@ import static org.junit.Assert.assertTrue;
 public class VariablesAndFunctionsTest {
 	
 	
-
     @Test
     public void testAccessToPublicVar() {
     	VariablesAndFunctions instance = new VariablesAndFunctions();
